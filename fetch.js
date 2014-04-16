@@ -87,17 +87,11 @@ function Twitter(config, onDone){
 						console.log( 'Fetching Older Tweets...')
 						fetchOlderTweets()
 					}
-					
 				}
 
 				fetchNewestTweets()
 				fetchOlderTweets()
-				
-
 			})
-
-
-
 		}
 
 		onDone.apply( self )
