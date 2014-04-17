@@ -58,7 +58,7 @@ function Twitter(config, onDone){
 				var fetchNewestTweets = function(){
 					// Get the newest posts
 					var newTweetOptions = {handle:handle}
-					if( tweetRange.newest != 0 ) newTweetOptions.max_id = tweetRange.newest				
+					if( tweetRange.newest != 0 ) newTweetOptions.since_id = tweetRange.newest				
 					self.getTimeline(newTweetOptions, storeTweets)
 				}
 
@@ -104,7 +104,7 @@ var creds = {
 }
 
 var twit = new Twitter(creds, function(){
-	this.storeFullTimeline('jawbone')
+	this.storeFullTimeline('aza')
 })
 
 
