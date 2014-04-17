@@ -58,7 +58,9 @@ function Twitter(config, onDone){
 				var fetchNewestTweets = function(){
 					// Get the newest posts
 					var newTweetOptions = {handle:handle}
-					if( tweetRange.newest != 0 ) newTweetOptions.since_id = tweetRange.newest				
+
+					// We get the last 200 tweets, assuming those are the ones that have been updated
+					// with new favs and retweets.
 					self.getTimeline(newTweetOptions, storeTweets)
 				}
 
